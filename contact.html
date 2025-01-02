@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Luxury</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <link rel='stylesheet' type='text/css' media='screen'
+            href='mystyle.css'>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+    <body>
+        <header>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container-fluid">
+                    <!-- Hotel Name and Logo -->
+                    <div class="navbar-brand d-flex align-items-center"
+                        href="#">
+                        <img src="hotel_logo.png" alt="Hotel Logo"
+                            style="height: 50px; margin-right: 10px;">
+                        <h4 nav-heading> STAR HOTEL</h4>
+                    </div>
+
+                    <!-- Toggler Button -->
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                    href="rooms.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Rooms
+                                </a>
+                                <ul class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item"
+                                            href="suite.html">Suite
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="single.html">Single
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="double.html">Double
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="deluxe.html">Deluxe
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="family">Family
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="superior.html">Superior
+                                            Room</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- Book Now button that opens the modal -->
+                                <button type="button" class="btn btn-warning"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">
+                                    Book Now
+                                </button>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Carousel Slider -->
+            <!-- Carousel Slider -->
+            <div id="carouselExampleAutoplay" class="carousel slide"
+                data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-wrap="true">
+
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img
+                            src="https://preview.colorlib.com/theme/royal/image/blog/blog-3.jpg.webp"
+                            class="d-block w-100" alt="Slide 1">
+                        <div class="overlay"></div>
+
+                        <div class="carousel-caption d-block px-3">
+                            <h5 class="fw-bold text-wrap">Contact</h5>
+                            <p class="lead"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section class="contact_section">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Info -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="contact_info">
+                            <h2><strong>Contact Us</strong></h2><br>
+                            <p>Contact:<br> +91 998-779-1977</p><br>
+                            <p>Email:<br>info@mentationgroup.com</p><br>
+                            <p>Address:<br>Infinity Square 117, Plot no. 95
+                                1/2<br>
+                                Waliv Road Near Golani Naka Vasai (E),<br>
+                                Maharashtra 401208</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-6">
+                        <div class="contact-us-section">
+                            <form>
+                                <h2 class="contact-heading">Get In Touch</h2>
+
+                                <!-- Name -->
+                                <div class="form-row align-items-center mb-3">
+                                    <div class="form-group col-md-3">
+                                        <label for="firstName">Name</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control"
+                                            id="firstName"
+                                            placeholder="Write your first name"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-row align-items-center mb-3">
+                                    <div class="form-group col-md-3">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="email" class="form-control"
+                                            id="email"
+                                            placeholder="name@example.com"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="form-row align-items-center mb-3">
+                                    <div class="form-group col-md-3">
+                                        <label for="phone">Phone</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <input type="text" class="form-control"
+                                            id="phone"
+                                            placeholder="Phone Number" required>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="form-row align-items-center mb-3">
+                                    <div class="form-group col-md-3">
+                                        <label for="message">Message</label>
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <textarea class="form-control"
+                                            id="message"
+                                            placeholder="Your message"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="form-group text-right">
+                                    <button type="submit"
+                                        class="btn btn-warning">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- feedback form -->
+
+        <section class="feedback-section py-5">
+
+            <div class="container">
+                <h2 class="feedback-heading">Hotel Feedback Form</h2>
+                <div class="feedback-container mx-auto col-md-8 col-lg-6">
+                    <form>
+                        <!-- First Name -->
+                        <div class="form-row align-items-center mb-3">
+                            <div class="form-group col-md-3">
+                                <label for="firstName">First Name</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control"
+                                    id="firstName" placeholder="First Name"
+                                    required>
+                            </div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="form-row align-items-center mb-3">
+                            <div class="form-group col-md-3">
+                                <label for="lastName">Last Name</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="text" class="form-control"
+                                    id="lastName" placeholder="Last Name"
+                                    required>
+                            </div>
+                        </div>
+                        <!-- Check-In Date -->
+                        <div class="form-row align-items-center mb-3">
+                            <div class="form-group col-md-3">
+                                <label for="checkInDate">Check-In Date</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <input type="date" class="form-control"
+                                    id="checkInDate" required>
+                            </div>
+                        </div>
+
+                        <!-- Text-box -->
+                        <div class="form-row align-items-center mb-3">
+                            <div class="form-group col-md-3">
+                                <label for="message">Share Your Thoughts</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <textarea class="form-control" id="message"
+                                    placeholder="Your feedback" rows="4"
+                                    required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Rate Your Experience -->
+                        <div class="form-row align-items-center mb-3">
+                            <div class="form-group col-md-3">
+                                <label for="rating">Rate Your Experience</label>
+                            </div>
+                            <div class="form-group col-md-9">
+                                <div class="rating-stars">
+                                    <input type="radio" id="star5" name="rating" value="5" />
+                                    <label for="star5" class="star">&#9733;</label>
+                        
+                                    <input type="radio" id="star4" name="rating" value="4" />
+                                    <label for="star4" class="star">&#9733;</label>
+                        
+                                    <input type="radio" id="star3" name="rating" value="3" />
+                                    <label for="star3" class="star">&#9733;</label>
+                        
+                                    <input type="radio" id="star2" name="rating" value="2" />
+                                    <label for="star2" class="star">&#9733;</label>
+                        
+                                    <input type="radio" id="star1" name="rating" value="1" />
+                                    <label for="star1" class="star">&#9733;</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-right">
+                            <button type="submit"
+                                class="btn btn-warning">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+         <!-- Modal -->
+       <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Hotel Booking Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="hotelBookingForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="checkin" class="form-label">Check-In Date</label>
+                                <input type="date" class="form-control" id="checkin" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="checkout" class="form-label">Check-Out Date</label>
+                                <input type="date" class="form-control" id="checkout" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="guests" class="form-label">Number of Guests</label>
+                                <input type="number" class="form-control" id="guests" min="1" placeholder="Enter number of guests" required>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-warning btn-lg">Submit Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- footer section -->
+        <div class="footer">
+            <div class="container">
+                <!-- Responsive row for all four sections -->
+                <div class="row d-flex flex-wrap justify-content-between">
+                    <!-- Food Wale Section -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <h5>STAR HOTEL</h5>
+                        <p>
+                            Hospitality and Comfort are<br> our watchwords
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i
+                                    class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#"><i
+                                    class="fab fa-instagram fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <!-- Open Hours Section -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <h5>OPEN HOURS</h5>
+                        <div class="open-hours d-flex justify-content-between">
+                            <div class="open-hours-day">
+                                <p>Monday</p>
+                                <p>Tuesday</p>
+                                <p>Wednesday</p>
+                                <p>Thursday</p>
+                                <p>Friday</p>
+                                <p>Saturday</p>
+                                <p>Sunday</p>
+                            </div>
+                            <div class="open-hours-time">
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                                <p>9:00 - 24:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Us Section -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <h5>CONTACT US</h5>
+                        <ul class="list-unstyled">
+                            <li>Infinity Square 117, Plot no. 95 1/2 Waliv Road
+                                Near Golani Naka Vasai (E), Maharashtra
+                                401208</li>
+                            <li>Email: info@mentationgroup.com</li>
+                            <li>Phone: +91 998-779-1977</li>
+                        </ul>
+                    </div>
+                    <!-- Services Section -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <h5>SERVICES</h5>
+                        <ul class="list-unstyled">
+                            <li>Holidays</li>
+                            <li>Dining</li>
+                            <li>Swimming</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <!-- Footer bottom row -->
+                <div class="d-flex justify-content-between row">
+                    <div class="text-start col" style="padding: 0rem 2rem;">
+                        <p>Copyright ©2024 All rights reserved | Food Wale</p>
+                    </div>
+                    <div class="text-end col" style="padding: 0rem 2rem;">
+                        <p>Created by Mentation Solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- aos scripts -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+
+    </body>
+</html>

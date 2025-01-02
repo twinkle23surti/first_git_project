@@ -1,0 +1,933 @@
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden;  */
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent navbar */
+    padding: 10px;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; 
+    z-index: 1050; 
+    
+}
+.navbar-toggler {
+    z-index: 9999; /* Ensure the toggler stays above the content */
+}
+.navbar .nav-link {
+    color: white !important; /* White text for links */
+}
+
+.navbar-nav{
+    margin-right: 200px ;
+}
+.navbar-nav .nav-link:hover{
+color: gold !important;
+}
+
+
+.navbar-brand{
+    color:gold;
+    font-family: "Playfair+Display", times, serif;
+}
+.navbar-brand:hover h4{
+  color:gold;
+}
+
+ .overlay {
+  background: linear-gradient(rgba(9, 44, 50, -.616), #000000e3);
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+ }
+.carousel-inner img {
+    height: 100vh;
+    object-fit: cover;
+     background: linear-gradient(rgba(16, 44, 16, .616), #000000e3);
+    
+
+}
+
+.about_heading{
+    text-align: center;
+    font-family: "Playfair+Display", times, serif;
+    font-size: xxx-large;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.lead{
+    font-family: ui-monospace;
+    font-size: larger;
+}
+
+.card-text{
+  font-family: "Playfair+Display", times, serif;
+}
+
+ .rooms-heading{
+    text-align: center;
+    font-family: "Playfair+Display", times, serif;    font-size: xxx-large;
+    margin-top: 20px;
+}
+
+
+.slider-container {
+    text-align: center; 
+    padding: 20px;
+    background-color:#fff;
+}
+
+.slider-heading{
+    text-align: center;
+    font-family: "Playfair+Display", times, serif;
+    color:black;
+    margin-bottom: 50px;
+    font-size: xxx-large;
+}
+
+
+
+
+.slider-image {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    margin: auto; 
+    display: block;
+}
+.carousel-image{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .carousel-caption {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    color: white;
+    display: inline-block;
+} */
+
+.carousel-caption{
+top: 25%;
+right: 56%;
+/* background-color: rgba(0, 0, 0, 0.5);  */
+height: min-content;
+font-family: "Playfair+Display", times, serif;
+left: 1%;
+
+}
+
+.carousel-caption h5{
+    font-size: 1.5rem; /* Adjust heading size */
+    line-height: 1.2; 
+    font-size:xxx-large;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #fff; /* Ensure the text is visible */
+    z-index: 10; 
+}
+.carousel-caption p{
+    font-size:larger;
+    font-size: 1rem;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+ .location,.email,.contact
+ {
+    margin-right: 10px;
+}
+.list-unstyled-follow-us{
+    display: flex;
+    margin-right: 10px;
+    gap: 25px;
+}
+.icon-heading{
+    margin-left:  32px;;
+}
+.hotel-room-body{
+    padding: 30px;
+}
+.hotel-room{
+    padding: 50px;
+}
+.room-heading{
+    text-align: center;
+    margin-top: 20px;
+}
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Adjust as needed for spacing */
+}
+
+.contact-list li i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.contact-list li .placeholder {
+    visibility: hidden; /* Makes the placeholder icons invisible while keeping alignment */
+}
+
+.home_vedio{
+  margin-right: 160px;
+}
+
+/* footer */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #f00;
+    text-decoration: underline;
+  }
+  
+  .footer .social-icons a {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .footer .social-icons a:hover {
+    color:yellow;
+  }
+  
+  .footer .instagram img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin: 0px;
+  }
+  
+  .footer .form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  
+  .footer .form-control:focus {
+    background-color: #444;
+    border-color: #f00;
+    box-shadow: none;
+  }
+  
+  .footer .btn-danger {
+    background-color: #f00;
+    border: none;
+  }
+  
+  .footer .btn-danger:hover {
+    background-color: #d60000;
+  }
+  
+  .footer hr {
+    border-color: #444;
+  }
+  
+  .footer .copyright {
+    font-size: 13px;
+    margin-top: 20px;
+    color: #aaa;
+  }
+  
+  .footer .open-hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 60px; 
+  }
+  
+  .footer .open-hours-day,
+  .footer .open-hours-time {
+    flex: 1;
+    margin-right: 0;
+  }
+  
+  .footer .open-hours-day p,
+  .footer .open-hours-time p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer .open-hours-day p {
+    font-weight: bold;
+  }
+  
+  .footer .open-hours-time p {
+    text-align: left;
+  }
+/* our facility */
+/* Facilities Section */
+.facilities_area {
+  position: relative;
+  background-image: url('https://preview.colorlib.com/theme/glint/images/hero-bg.jpg.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure full height for the section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.facilities_area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.facility-service {
+  position: relative;
+  z-index: 2; /* Content above overlay */
+  padding: 30px 15px; /* Adjust padding */
+}
+
+/* home room section */
+.card:hover .card-hover {
+  opacity: 1;
+}
+
+/* Default hidden button */
+.card-hover {
+  opacity: 0;
+}
+
+
+/* Facility Cards */
+.facility-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.facility-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.facilities_item h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.facilities_item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Title and Section Styles */
+.section_title {
+  margin-bottom: 40px;
+}
+
+.sec_h4 {
+  font-family: "Playfair Display", serif;
+}
+.sec_h4 {
+  font-family: "Playfair Display", serif;
+  color:#fff
+}
+.section_title p{
+  color: #fff;
+}
+
+/* Responsive Behavior */
+@media (max-width: 991px) {
+  .facilities_area {
+    min-height: auto; /* Adjust height for smaller screens */
+  }
+  .facility-card {
+    margin-bottom: 20px; /* Space between cards */
+  }
+}
+
+.testimonial-card .card-up {
+  height: 100px;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  padding: 20px;
+}
+.testimonial-card .avatar {
+  width: 100px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.testimonials-section {
+  margin: 20px auto; /* Add some space around the section */
+  max-width: 800px; /* Limit the section width */
+  text-align: center; /* Center-align the content */
+}
+.about-img{
+display: flex;
+gap: 20px;
+}
+.img-container img{
+  width:100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.second-img{
+  margin-top: 35px;;
+}
+.about-heading2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Playfair+Display", times, serif;
+  font-size: xx-large;
+  padding: 25px;
+}
+.about-description{
+  font-family: "Playfair+Display", times, serif;
+  font-size: 1rem;
+  justify-content: flex-end;
+
+}
+.about-vedio-section{
+  background-color:aliceblue;
+}
+
+.gallery-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects */
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+/* contact-info */
+.contact_section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+.contact-heading{
+  text-align: center;
+ font-family: "Playfair+Display", times, serif;
+}
+
+.contact_info {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-section {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-heading {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  border-radius: 5px;
+}
+.contact_info p{
+  margin-bottom: -5px;
+  
+}
+.contact_info h2{
+  font-family: "Playfair+Display", times, serif;
+  text-align: center;
+  font-size:27px;
+}
+/* feedback form */
+/* Feedback Section Background */
+.feedback-section {
+  background-image: url('https://img.freepik.com/premium-photo/royal-aqua-shiny-glowing-effects-abstract-background-design_851755-346770.jpg?w=996');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 60px 0;
+}
+
+/* Heading Style */
+.feedback-heading {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Feedback Form Container */
+.feedback-container {
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields and Labels */
+.feedback-container .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.feedback-container label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Submit Button Style */
+.feedback-container .btn-warning {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-container .btn-warning:hover {
+  background-color: #e6b800;
+}
+.form-row .form-group label {
+  white-space: nowrap;
+}
+
+/* feedback star */
+
+/* Hide radio buttons */
+.rating-stars input[type="radio"] {
+  display: none;
+}
+
+/* Style stars */
+.rating-stars label.star {
+  font-size: 2rem;
+  color: #ccc; /* Default star color */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Highlight stars on hover */
+.rating-stars label.star:hover,
+.rating-stars label.star:hover ~ label.star {
+  color: #ffcc00; /* Hover color for stars */
+}
+
+/* Highlight stars when checked */
+.rating-stars input[type="radio"]:checked ~ label.star {
+  color: #ffcc00; /* Selected stars color */
+}
+
+/* food section */
+.ftco-section {
+  position: relative;
+  background: url('https://th.bing.com/th/id/OIP.oOwpHRfrkw-QklV1lvY8FQAAAA?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+  background-size: cover;
+  padding: 60px 0;
+  z-index: 1;
+}
+
+.ftco-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: -1;
+}
+
+.pricing-entry {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-entry:hover {
+  transform: scale(1.05);
+}
+
+.pricing-entry .img {
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+}
+
+.pricing-entry .desc {
+  width: 60%;
+  padding: 20px;
+}
+
+.pricing-entry .desc h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pricing-entry .desc .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745; /* Green color for price */
+  margin-left: auto;
+}
+
+.pricing-entry .desc p {
+  font-size: 14px;
+  color: #555555;
+  margin-top: 10px;
+}
+
+/* Card container */
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hide Book Now button initially */
+.book-now-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Show the Book Now button on hover */
+.card:hover .book-now-btn {
+  opacity: 1; /* Show button on hover */
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Button styling */
+.book-now-btn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:gold;
+  border: none;
+  border-radius: 5px;
+  color:black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-btn button:hover {
+  background-color:gold;
+}
+
+.room_text li{
+  list-style: none;
+  font-size: 18px;
+  color: #1d1c1c;
+  line-height: 36px;
+}
+
+/* suite room */
+.suite_room {
+  padding: 50px 0;
+}
+.room_text {
+  padding: 20px;
+}
+.room_img {
+  text-align: center;
+}
+
+/* gallery- owl carousel */
+/* gallery- owl carousel */
+.gallery-slide-container {
+  text-align: center; 
+  padding: 20px;
+  background-color: #fff;
+}
+
+.gallery-slider-heading {
+  text-align: center;
+  font-family: "Playfair Display", times, serif;
+  color: black;
+  margin-bottom: 30px;
+  font-size: 28px; /* Adjusted size for heading */
+  
+}
+
+.gallery-slide-image {
+  width: 70%; /* Set width as percentage of the container (adjustable) */
+  max-width: 600px; /* Max width to avoid overly large images */
+  height: auto; /* Adjust height proportionally to width */
+  object-fit: contain; /* Display the full image without cropping */
+  margin: auto;
+  display: block;
+  border-radius: 10px; /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Owl dots styles */
+.owl-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+  transition: background 0.3s;
+}
+
+.owl-dots .owl-dot.active span {
+  background: #555;
+}
+
+
+/* suite room */
+/* Special Section */
+.special {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0; /* Adds space above and below */
+}
+
+/* Background Image */
+.background-suit-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  
+}
+
+/* Special Content */
+
+.special_content {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Black overlay directly on the content */
+  color: white; /* Makes text readable */
+  border-radius: 10px; /* Rounded corners for overlay */
+}
+
+/* Title */
+.details_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center; /* Center title */
+}
+
+/* List */
+.details_list ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px; /* Space between list and button */
+}
+
+/* Long List of Features - Fix Alignment */
+
+.details_long_list ul {
+  margin-left: 0;
+  padding-left: 0;
+  gap: 10px; /* Space between items */
+  list-style: none; /* Remove default list styling */
+}
+
+.details_long_list ul li {
+  font-size: 15px;
+  display: flex; /* Align the text and dot horizontally */
+  align-items: center; /* Center the dot with text */
+}
+
+.details_long_list ul li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff; /* White bullet point */
+  margin-right: 10px; /* Space between dot and text */
+}
+
+/* Book Now Button */
+.book_now_button a {
+  display: inline-block;
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.book_now_button a:hover {
+  background-color: #ffc107;
+  transform: scale(1.1);
+}
+
+/* suite image with text */
+
+.suite-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.suite-img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.hover-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.suite-img-container:hover .hover-text {
+  opacity: 1;
+}
+
+.Booking_price
+{
+  position: absolute;
+    bottom: 15px;
+    left: 15px;
+    width: 128px;
+    height: 36px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #393939;
+}

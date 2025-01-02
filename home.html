@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Luxury</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <link rel='stylesheet' type='text/css' media='screen'
+            href='mystyle.css'>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <script src="fetchRooms.js"></script>
+
+    </head>
+    <body>
+
+       
+
+        <header>
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container-fluid">
+                    <!-- Hotel Name and Logo -->
+                    <div class="navbar-brand d-flex align-items-center"
+                        href="#">
+                        <img src="hotel_logo.png" alt="Hotel Logo"
+                            style="height: 50px; margin-right: 10px;">
+                        <h4 nav-heading> STAR HOTEL</h4>
+                    </div>
+
+                    <!-- Toggler Button -->
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About
+                                    Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"
+                                    href="rooms.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Rooms
+                                </a>
+                                <ul class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item"
+                                            href="suite.html">Suite
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="single.html">Single
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="double.html">Double
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="deluxe.html">Deluxe
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="family.html">Family
+                                            Room</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="superior.html">Superior
+                                            Room</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- Book Now Button triggers the modal -->
+                                <button type="button" class="btn btn-warning"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">
+                                    Book Now
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Carousel Slider -->
+            <!-- Carousel Slider -->
+            <div id="carouselExampleAutoplay" class="carousel slide"
+                data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-wrap="true">
+
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img
+                            src="https://preview.colorlib.com/theme/royal/image/blog/blog-3.jpg.webp"
+                            class="d-block w-100" alt="Slide 1">
+                        <div class="overlay"></div>
+
+                        <div class="carousel-caption d-block px-3">
+                            <h5 class="fw-bold text-wrap">Star A Luxury
+                                Hotel</h5>
+                            <p class="lead">Here are the best hotel booking
+                                sites, including recommendations for
+                                international travel and for finding low-priced
+                                hotel rooms.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img
+                            src="https://cdn.sanity.io/images/ocl5w36p/prod2/d73db84c8d96fcc30bf87b217bfd1e49c065e720-3840x1860.jpg?w=1024&amp;fm=webp&amp;dpr=2"
+                            class="d-block w-100" alt="Slide 2">
+                        <div class="overlay"></div>
+                        <div class="carousel-caption d-block px-3">
+                            <h5 class="fw-bold text-wrap">Star A Luxury
+                                Hotel</h5>
+                            <p class="lead">Here are the best hotel booking
+                                sites, including recommendations for
+                                international travel and for finding low-priced
+                                hotel rooms.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img
+                            src="https://tourlandindia.com/assets/img/page-bg.jpg"
+                            class="d-block w-100" alt="Slide 3">
+                        <div class="overlay"></div>
+                        <div class="carousel-caption d-block px-3">
+                            <h5 class="fw-bold text-wrap top-heading">Star A
+                                Luxury Hotel</h5>
+                            <p class="lead">Here are the best hotel booking
+                                sites, including recommendations for
+                                international travel and for finding low-priced
+                                hotel rooms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Modal -->
+        <div class="modal fade" id="bookingModal" tabindex="-1"
+            aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bookingModalLabel">Hotel
+                            Booking Form</h5>
+                        <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="hotelBookingForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name"
+                                        class="form-label">Name</label>
+                                    <input type="text" class="form-control"
+                                        id="name" placeholder="Enter your name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email"
+                                        class="form-label">Email</label>
+                                    <input type="email" class="form-control"
+                                        id="email"
+                                        placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone
+                                        Number</label>
+                                    <input type="tel" class="form-control"
+                                        id="phone"
+                                        placeholder="Enter your phone number"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="checkin"
+                                        class="form-label">Check-In Date</label>
+                                    <input type="date" class="form-control"
+                                        id="checkin" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="checkout"
+                                        class="form-label">Check-Out
+                                        Date</label>
+                                    <input type="date" class="form-control"
+                                        id="checkout" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="guests"
+                                        class="form-label">Number of
+                                        Guests</label>
+                                    <input type="number" class="form-control"
+                                        id="guests" min="1"
+                                        placeholder="Enter number of guests"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="submit"
+                                    class="btn btn-warning btn-lg">Submit
+                                    Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <h2 class="about_heading">Welcome!</h2>
+            <div
+                class="row featurette d-flex justify-content-center align-items-center">
+                <div class="col-md-7 order-md-2 about-content">
+                    <h2 class="featurette-heading">
+                        <span class="text-muted">
+                        </span></h2>
+                    <p class="lead ">"Welcome to [Hotel Name]! We are delighted
+                        to have you stay with us and are committed to making
+                        your experience
+                        as comfortable and enjoyable as possible. Please don't
+                        hesitate to ask our friendly staff if you need anything
+                        during your stay.
+                        We look forward to assisting you and hope you enjoy your
+                        time here!".
+
+                    </p>
+
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img
+                        src="https://cdn.sanity.io/images/ocl5w36p/prod2/755516a1ccee23175ce67a8a8d7752950481f4d9-1720x1112.jpg?w=768&amp;fm=webp&amp;dpr=2"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto image-with-border"
+                        width="500" height="500" alt>
+                </div>
+            </div>
+
+        </div>
+        <!-- room section -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section text-center">
+                        <span class="subheading"
+                            style="color:gold; font-size:x-large;">Star
+                            Rooms</span>
+                        <h2 style="color:black; font-size: xx-large;">Hotel
+                            Master's Rooms</h2>
+                    </div>
+                </div>
+
+                <div id="rooms-output"></div>
+                <div><button id="rooms_data_btn">Get a room data</button></div>
+
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
+                            <img
+                                src="https://cdn.pixabay.com/photo/2020/02/01/06/12/living-room-4809587_1280.jpg"
+                                class="card-img-top" alt="Family Room">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Suite Room</h5>
+                                <p class="card-text">₹ 1500 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning"><a
+                                        style="color: black;"
+                                        href="suite.html">View
+                                        Details</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
+                            <img
+                                src="https://img.freepik.com/premium-photo/hotel-room-with-bed-chair-lamp_865967-1035491.jpg"
+                                class="card-img-top" alt="Deluxe Room">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Single Room</h5>
+                                <p class="card-text">₹ 2000 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <img
+                                src="https://photos.mandarinoriental.com/is/image/MandarinOriental/dmo-The-worlds-most-romantic-hotel-suites-dubai-royal-penthouse-bedroom"
+                                class="card-img-top" alt="Luxury Suite">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Double Room</h5>
+                                <p class="card-text">₹ 4000 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000">
+                            <img
+                                src="https://livinator.com/wp-content/uploads/2015/09/thepinnaclelist-st-regis-luxury-hotel-shenzhen-china.jpg"
+                                class="card-img-top" alt="Family Room">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Deluxe Room</h5>
+                                <p class="card-text">₹ 5000 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
+                            <img
+                                src="https://www.bbcgoodfoodme.com/wp-content/uploads/2019/04/3.jpg"
+                                class="card-img-top" alt="Deluxe Room">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Family Room</h5>
+                                <p class="card-text">₹ 6000 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card position-relative" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="3000">
+                            <img
+                                src="https://image.made-in-china.com/2f0j00TdDtZjQzsbru/New-Design-5-Star-Guestroom-Furniture-Hotel-Wooden-Bedroom-Sets-Fantastic-Hotel-Furnitures.jpg"
+                                class="card-img-top" alt="Luxury Suite">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Superior Room</h5>
+                                <p class="card-text">₹ 7000 per night</p>
+                            </div>
+                            <!-- Book Now Button (Initially hidden) -->
+                            <div class="book-now-btn">
+                                <button class="btn btn-warning">View
+                                    Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- our facilities -->
+        <section class="facilities_area section_gap">
+            <div class="container facility-service">
+                <!-- Overlay -->
+                <div class="overlay-facilities"></div>
+                <!-- Section Title -->
+                <div class="section_title text-center ">
+                    <h2 class="title_w sec_h4">Star Facilities</h2>
+                    <p>Who are in extremely love with eco-friendly system.</p>
+                </div>
+                <!-- Responsive Cards -->
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i
+                                        class="lnr lnr-dinner"></i>
+                                    Restaurant</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i
+                                        class="lnr lnr-bicycle"></i> Sports
+                                    Club</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>
+                                    Swimming Pool</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-car"></i>
+                                    Rent a Car</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i
+                                        class="lnr lnr-construction"></i>
+                                    Gymnesium</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card facility-card">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i
+                                        class="lnr lnr-coffee-cup"></i> Bar</h4>
+                                <p>Usage of the Internet is becoming more common
+                                    due to rapid advancement of technology and
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-vedio-section">
+            <h2 class="about-heading2 ">Finest and luxurious hotel in the
+                town</h2>
+            <div class="row justify-content-end position-relative home_vedio">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="h-100">
+                        <div
+                            class="ezy__featured24-bg-holder aos-init aos-animate"
+                            style="border-radius: 20px; overflow: hidden"
+                            data-aos="zoom-in" data-aos-delay="300">
+                            <!-- Video Element -->
+                            <video autoplay muted loop class="w-100 h-100"
+                                style="object-fit: cover; border-radius: 20px; margin-bottom: 20px; margin-right: 50px;">
+                                <source
+                                    src="https://cdn.pixabay.com/video/2019/08/10/25907-354651355_large.mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class>
+                        <div
+                            class="d-flex ezy__featured24-item position-relative p-3 p-md-4 mb-3 mb-lg-4 aos-init aos-animate"
+                            data-aos="fade-up" data-aos-delay="200">
+
+                            <div>
+                                <p
+                                    class="ezy__featured24-content about-description mb-0">
+                                    Nestled in the heart of the city, our hotel
+                                    redefines elegance and luxury, offering
+                                    an<br> unforgettable experience for every
+                                    guest.
+                                    From exquisitely designed rooms and suites
+                                    to world-class dining and personalized
+                                    services, every detail is crafted to
+                                    perfection.
+                                    Indulge in modern amenities, relax in our
+                                    serene spa, and enjoy breathtaking views
+                                    that set the stage for a truly exceptional
+                                    stay.
+                                    Whether you're here for business or leisure,
+                                    our hotel promises unparalleled comfort and
+                                    sophistication,
+                                    making it the finest and most luxurious
+                                    destination in town.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- food section -->
+
+            <section class="ftco-section ftco-menu bg-light">
+                <div class="container">
+                    <div class="row justify-content-center mb-5 pb-3">
+                        <div
+                            class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated">
+                            <span class="subheading"
+                                style="color:gold; font-size:x-large;">Star
+                                Restaurant Menu</span>
+                            <h2 style="color: #fff; font-size: xx-large;">Our
+                                Specialties</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://www.nrn.com/sites/nrn.com/files/styles/article_featured_standard/public/burgerandfriescosts_0.jpg?itok=_S_HQsx_);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://thumbs.dreamstime.com/b/pizza-coke-wooden-table-42087861.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://www.mashed.com/img/gallery/this-chain-restaurant-has-the-best-breakfast-food-according-to-27-of-people/l-intro-1619548611.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://wallpapercave.com/wp/wp7845825.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://wallpaperaccess.com/full/767054.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://images5.alphacoders.com/404/404896.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                           
+                             <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-11.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/8e357b75-0dc4-4cce-82b0-3cb11bb93ec5.jpg?imwidth=175&pixelratio=2);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-6 d-flex">
+                            <div
+                                class="pricing-entry rounded d-flex ftco-animate fadeInUp ftco-animated">
+                                <div class="img"
+                                    style="background-image: url(https://thumbs.dreamstime.com/b/club-sandwich-panini-ham-tomato-cheese-lettuce-top-view-266545288.jpg);"></div>
+                                <div class="desc p-4">
+                                    <div
+                                        class="d-md-flex text align-items-start">
+                                        <h3><span>Grilled Crab with
+                                                Onion</span></h3>
+                                        <span class="price">$20.00</span>
+                                    </div>
+                                    <div class="d-block">
+                                        <p>A small river named Duden flows by
+                                            their place and supplies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- testimonial people say -->
+
+            <section class="testimonials-section py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 col-xl-8 text-center">
+                        <h3 class="mb-4">Testimonials</h3>
+                        <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Fugit, error amet
+                            numquam iure provident voluptate esse quasi,
+                            veritatis totam voluptas nostrum
+                            quisquam eum porro a pariatur veniam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row text-center d-flex align-items-stretch">
+                    <div
+                        class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+                        <div class="card testimonial-card">
+                            <div class="card-up"
+                                style="background-color: #9d789b;"></div>
+                            <div class="avatar mx-auto bg-white">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                    class="rounded-circle img-fluid" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mb-4">Maria Smantha</h4>
+                                <hr />
+                                <p class="dark-grey-text mt-4">
+                                    <i class="fas fa-quote-left pe-2"></i>Lorem
+                                    ipsum dolor sit amet eos adipisci,
+                                    consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+                        <div class="card testimonial-card">
+                            <div class="card-up"
+                                style="background-color: #7a81a8;"></div>
+                            <div class="avatar mx-auto bg-white">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                                    class="rounded-circle img-fluid" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mb-4">Lisa Cudrow</h4>
+                                <hr />
+                                <p class="dark-grey-text mt-4">
+                                    <i class="fas fa-quote-left pe-2"></i>Neque
+                                    cupiditate assumenda in maiores
+                                    repudi mollitia architecto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-0 d-flex align-items-stretch">
+                        <div class="card testimonial-card">
+                            <div class="card-up"
+                                style="background-color: #6d5b98;"></div>
+                            <div class="avatar mx-auto bg-white">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                                    class="rounded-circle img-fluid" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mb-4">John Smith</h4>
+                                <hr />
+                                <p class="dark-grey-text mt-4">
+                                    <i
+                                        class="fas fa-quote-left pe-2"></i>Delectus
+                                    impedit saepe officiis ab
+                                    aliquam repellat rem unde ducimus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer section -->
+
+            <!-- footer section -->
+            <div class="footer">
+                <div class="container">
+                    <!-- Responsive row for all four sections -->
+                    <div class="row d-flex flex-wrap justify-content-between">
+                        <!-- Food Wale Section -->
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <h5>STAR HOTEL</h5>
+                            <p>
+                                Hospitality and Comfort are<br> our watchwords
+                            </p>
+                            <div class="social-icons">
+                                <a href="#"><i
+                                        class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#"><i
+                                        class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#"><i
+                                        class="fab fa-instagram fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <!-- Open Hours Section -->
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <h5>OPEN HOURS</h5>
+                            <div
+                                class="open-hours d-flex justify-content-between">
+                                <div class="open-hours-day">
+                                    <p>Monday</p>
+                                    <p>Tuesday</p>
+                                    <p>Wednesday</p>
+                                    <p>Thursday</p>
+                                    <p>Friday</p>
+                                    <p>Saturday</p>
+                                    <p>Sunday</p>
+                                </div>
+                                <div class="open-hours-time">
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                    <p>9:00 - 24:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Us Section -->
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <h5>CONTACT US</h5>
+                            <ul class="list-unstyled">
+                                <li>Infinity Square 117, Plot no. 95 1/2 Waliv
+                                    Road
+                                    Near Golani Naka Vasai (E), Maharashtra
+                                    401208</li>
+                                <li>Email: info@mentationgroup.com</li>
+                                <li>Phone: +91 998-779-1977</li>
+                            </ul>
+                        </div>
+                        <!-- Services Section -->
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <h5>SERVICES</h5>
+                            <ul class="list-unstyled">
+                                <li>Holidays</li>
+                                <li>Dining</li>
+                                <li>Swimming</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Footer bottom row -->
+                    <div class="d-flex justify-content-between row">
+                        <div class="text-start col" style="padding: 0rem 2rem;">
+                            <p>Copyright ©2024 All rights reserved | Food
+                                Wale</p>
+                        </div>
+                        <div class="text-end col" style="padding: 0rem 2rem;">
+                            <p>Created by Mentation Solution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- aos scripts -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
+
+        </body>
+    </html>
